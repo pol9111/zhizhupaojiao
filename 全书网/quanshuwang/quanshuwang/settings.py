@@ -52,14 +52,15 @@ PROXIES = [
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
 
-# # 使用了scrapy-redis里的去重组件，不使用scrapy默认的去重
-# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-# # 使用了scrapy-redis里的调度器组件，不实用scrapy默认的调度器
-# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-# # 使用队列形式
+
+# 使用了scrapy-redis里的去重组件，不使用scrapy默认的去重
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# 使用了scrapy-redis里的调度器组件，不实用scrapy默认的调度器
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# 使用队列形式
 # SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderQueue"
-# # 允许暂停，redis请求记录不丢失
-# SCHEDULER_PERSIST = True
+# 允许暂停，redis请求记录不丢失
+SCHEDULER_PERSIST = True
 #
 # REDIS_HOST = "127.0.0.1"
 # REDIS_PORT = 6379
@@ -101,7 +102,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'quanshuwang.pipelines.QuanshuwangPipeline': 300,
-    # 'scrapy_redis.pipelines.RedisPipeline': 900,
+    'scrapy_redis.pipelines.RedisPipeline': 900,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
