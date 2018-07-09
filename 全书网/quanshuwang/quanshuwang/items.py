@@ -15,8 +15,6 @@ class QuanshuwangItem(scrapy.Item):
     author = scrapy.Field()
     # 类型
     category = scrapy.Field()
-    # 目录
-    catalog = scrapy.Field()
     # 书名 创建小说txt名, 并用于判断是否为该本小说的章节内容
     title = scrapy.Field()
     # 章节名

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import scrapy, re, os
+import scrapy, re
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from quanshuwang.items import QuanshuwangItem

@@ -61,7 +61,7 @@ PROXIES = [
 # # 允许暂停，redis请求记录不丢失
 # SCHEDULER_PERSIST = True
 #
-# REDIS_HOST = "192.168.1.8"
+# REDIS_HOST = "127.0.0.1"
 # REDIS_PORT = 6379
 
 
