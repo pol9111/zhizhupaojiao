@@ -73,9 +73,9 @@ PROXIES = [
 ]
 
 DOWNLOADER_MIDDLEWARES = {
-   'mzitu.middlewares.MzituSpiderMiddleware': 150,
-   'mzitu.middlewares.RandomUserAgent': 100,
-   'mzitu.middlewares.RandomProxy': 200,
+   'mzitu.middlewares.MzituSpiderMiddleware': 500,
+   'mzitu.middlewares.RandomUserAgent': 400,
+   'mzitu.middlewares.RandomProxy': 750,
 }
 
 
